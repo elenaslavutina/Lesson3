@@ -1,15 +1,17 @@
-def sum_two_max(arg1, arg2, arg3):
-    min=arg1
-    if arg2 < arg1:
-        min = arg2
-    elif arg3 < min:
-            min = arg3
+def sum_two_max(stroka):
+    s = stroka.split()
+    minimum = int(s[0])
+    summ = int(s[0])
+    for i in range(1,len(s)):
+        if int(s[i])<minimum:
+            minimum = int(s[i])
+        summ = summ + int(s[i])
+    summ = summ - minimum
 
-    return min
-str = input("Введите три числа через пробел  ")
-print(str)
+    return summ
+stroka = input("Введите три числа через пробел  ")
+print(stroka)
 
-spisok = str.split()
+spisok = stroka.split()
 print(spisok)
-
-print(sum_two_max(int(spisok[0]), int(spisok[1]), int(spisok[2])))
+print(f"Сумма чисел без минимального = {sum_two_max(stroka)}")

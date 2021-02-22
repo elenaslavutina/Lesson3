@@ -10,8 +10,8 @@ def stroka_upper(long_stroka):
     result = " ".join(stroka2)
     return result
 
-str = input("Введите слово , все буквы маленькие   ")
-print(upper_case(str))
+stroka = input("Введите слово , все буквы маленькие   ")
+print(upper_case(stroka))
 str2 = input("Введите слова через пробел с маленьком регистре   ")
 print(stroka_upper(str2))
 
